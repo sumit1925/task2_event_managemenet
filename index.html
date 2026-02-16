@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digital Era Summit 2026</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&display=swap" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<style>
+body { font-family: 'Orbitron', sans-serif; }
+html { scroll-behavior: smooth; }
+
+/* Moving Gradient */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.animated-gradient {
+  background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #000000);
+  background-size: 400% 400%;
+  animation: gradientMove 12s ease infinite;
+}
+</style>
+</head>
+
+<body class="text-white animated-gradient overflow-x-hidden">
+
+<!-- Particles Background -->
+<div id="particles-js" class="fixed w-full h-full -z-10"></div>
+
+<!-- Navbar -->
+<nav class="fixed w-full bg-black/70 backdrop-blur-md z-50">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <h1 class="text-xl font-bold text-blue-400">DigitalEra</h1>
+
+    <div class="hidden md:flex space-x-6">
+      <a href="#about" class="hover:text-blue-400">About</a>
+      <a href="#speakers" class="hover:text-blue-400">Speakers</a>
+      <a href="#schedule" class="hover:text-blue-400">Schedule</a>
+      <a href="#venue" class="hover:text-blue-400">Venue</a>
+    </div>
+
+    <button id="menu-btn" class="md:hidden text-2xl">☰</button>
+  </div>
+
+  <div id="mobile-menu" class="hidden md:hidden bg-black/90 text-center py-4 space-y-4">
+    <a href="#about" class="block">About</a>
+    <a href="#speakers" class="block">Speakers</a>
+    <a href="#schedule" class="block">Schedule</a>
+    <a href="#venue" class="block">Venue</a>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="h-screen flex flex-col justify-center items-center text-center px-6 relative">
+
+  <div data-aos="fade-up">
+
+    <h1 class="text-4xl md:text-6xl font-extrabold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+      Step Into the Next Digital Era
+    </h1>
+
+    <p class="mt-6 text-gray-300">
+      Silver Oak University Presents The Most Futuristic Tech Event
+    </p>
+
+    <!-- Countdown -->
+    <div class="flex justify-center gap-6 mt-8 text-xl">
+      <div><span id="days">00</span><p class="text-sm">Days</p></div>
+      <div><span id="hours">00</span><p class="text-sm">Hours</p></div>
+      <div><span id="minutes">00</span><p class="text-sm">Minutes</p></div>
+      <div><span id="seconds">00</span><p class="text-sm">Seconds</p></div>
+    </div>
+
+    <button onclick="openModal()" class="mt-8 px-8 py-3 bg-blue-600 hover:bg-purple-600 rounded-full transition hover:scale-110 shadow-xl">
+      Register Now
+    </button>
+
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="py-24 px-6 md:px-20">
+
+  <div class="grid md:grid-cols-2 gap-12 items-center">
+
+    <!-- Image -->
+    <div data-aos="fade-right">
+      <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d"
+           alt="Tech Conference"
+           class="rounded-2xl shadow-2xl hover:scale-105 transition duration-500">
+    </div>
+
+    <!-- Content -->
+    <div data-aos="fade-left">
+      <h2 class="text-3xl md:text-4xl font-bold text-blue-400 mb-6">
+        About The Event
+      </h2>
+
+      <p class="text-gray-300 leading-relaxed mb-6">
+        <strong>Digital Era Summit 2026</strong> is a flagship technology event organized at 
+        <span class="text-purple-400 font-semibold">Silver Oak University</span>, 
+        bringing together innovators, developers, researchers, and future tech leaders 
+        under one roof.
+      </p>
+
+      <p class="text-gray-300 leading-relaxed mb-6">
+        This event is designed to explore emerging domains such as 
+        Artificial Intelligence, Web Development, Cybersecurity, 
+        Cloud Computing, and Startup Innovation. Attendees will gain 
+        real-world insights through keynote sessions, technical showcases, 
+        live demonstrations, and collaborative networking opportunities.
+      </p>
+
+      <p class="text-gray-300 leading-relaxed">
+        Hosted at <span class="text-blue-400 font-semibold">Aryabatta Hall</span>, 
+        the summit aims to inspire students to step confidently into the next 
+        generation of digital transformation and technological advancement.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- Speakers -->
+<section id="speakers" class="py-20 bg-black/40 text-center">
+  <h2 class="text-3xl font-bold text-purple-400 mb-12" data-aos="fade-up">Meet Our Speakers</h2>
+
+  <div class="grid md:grid-cols-3 gap-8 px-6">
+
+    <div class="bg-gray-800 p-6 rounded-xl hover:scale-105 transition" data-aos="zoom-in">
+      <img src="https://randomuser.me/api/portraits/men/32.jpg" class="mx-auto rounded-full w-32 h-32 mb-4">
+      <h3 class="text-xl text-blue-400">Dr. Raj Mehta</h3>
+      <p class="text-gray-400">AI Researcher</p>
+    </div>
+
+    <div class="bg-gray-800 p-6 rounded-xl hover:scale-105 transition" data-aos="zoom-in">
+      <img src="https://randomuser.me/api/portraits/women/44.jpg" class="mx-auto rounded-full w-32 h-32 mb-4">
+      <h3 class="text-xl text-purple-400">Priya Shah</h3>
+      <p class="text-gray-400">Startup Founder</p>
+    </div>
+
+    <div class="bg-gray-800 p-6 rounded-xl hover:scale-105 transition" data-aos="zoom-in">
+      <img src="https://randomuser.me/api/portraits/men/75.jpg" class="mx-auto rounded-full w-32 h-32 mb-4">
+      <h3 class="text-xl text-blue-400">Aman Verma</h3>
+      <p class="text-gray-400">Cyber Security Expert</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- Schedule -->
+<section id="schedule" class="py-20 text-center px-6" data-aos="fade-left">
+  <h2 class="text-3xl font-bold text-blue-400 mb-10">Event Schedule</h2>
+  <div class="space-y-6 max-w-2xl mx-auto">
+    <div class="bg-gray-800 p-4 rounded-lg">10:00 AM - Opening Ceremony</div>
+    <div class="bg-gray-800 p-4 rounded-lg">11:00 AM - Keynote</div>
+    <div class="bg-gray-800 p-4 rounded-lg">2:00 PM - Showcase</div>
+    <div class="bg-gray-800 p-4 rounded-lg">4:00 PM - Closing</div>
+  </div>
+</section>
+
+<!-- Venue -->
+<section id="venue" class="py-20 bg-black/50 text-center">
+  <h2 class="text-3xl font-bold text-purple-400">Venue</h2>
+  <p class="mt-6 text-gray-300 text-lg">
+    📍 Aryabatta Hall <br> Silver Oak University
+  </p>
+</section>
+
+<!-- Modal -->
+<div id="modal" class="fixed inset-0 bg-black/70 hidden justify-center items-center">
+  <div class="bg-gray-900 p-8 rounded-xl w-96 text-center">
+    <h2 class="text-2xl font-bold text-blue-400 mb-4">Register Now</h2>
+    <input type="text" placeholder="Your Name" class="w-full p-2 mb-3 rounded bg-gray-800">
+    <input type="email" placeholder="Your Email" class="w-full p-2 mb-3 rounded bg-gray-800">
+    <button class="w-full bg-blue-600 py-2 rounded hover:bg-purple-600">Submit</button>
+    <button onclick="closeModal()" class="mt-4 text-red-400">Close</button>
+  </div>
+</div>
+
+<footer class="py-6 text-center text-gray-400">
+  © 2026 Silver Oak University | Digital Era Summit
+</footer>
+
+<!-- Scripts -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+<script>
+AOS.init();
+
+/* Mobile Menu */
+document.getElementById("menu-btn").addEventListener("click", function() {
+  document.getElementById("mobile-menu").classList.toggle("hidden");
+});
+
+/* Countdown */
+const eventDate = new Date("March 30, 2026 10:00:00").getTime();
+setInterval(function() {
+  const now = new Date().getTime();
+  const distance = eventDate - now;
+  document.getElementById("days").innerHTML = Math.floor(distance / (1000*60*60*24));
+  document.getElementById("hours").innerHTML = Math.floor((distance % (1000*60*60*24))/(1000*60*60));
+  document.getElementById("minutes").innerHTML = Math.floor((distance % (1000*60*60))/(1000*60));
+  document.getElementById("seconds").innerHTML = Math.floor((distance % (1000*60))/1000);
+}, 1000);
+
+/* Modal */
+function openModal() {
+  document.getElementById("modal").classList.remove("hidden");
+  document.getElementById("modal").classList.add("flex");
+}
+function closeModal() {
+  document.getElementById("modal").classList.add("hidden");
+}
+
+/* Particles */
+particlesJS("particles-js", {
+  particles: {
+    number: { value: 80 },
+    size: { value: 3 },
+    color: { value: "#00bfff" },
+    line_linked: { enable: true, color: "#00bfff" },
+    move: { speed: 2 }
+  }
+});
+</script>
+
+</body>
+</html>
